@@ -1,3 +1,4 @@
+# Inspired by: https://github.com/matsp/docker-flutter
 FROM ubuntu:22.04
 
 ENV UID=1000
