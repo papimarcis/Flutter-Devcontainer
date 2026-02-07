@@ -55,7 +55,10 @@ RUN curl -o flutter.tar.xz $FLUTTER_URL \
   && mkdir -p $FLUTTER_HOME \
   && tar xf flutter.tar.xz -C /home/$USER \
   && rm flutter.tar.xz \
+  && dart --disable-analytics \
   && flutter config --no-analytics \
+  && flutter config --no-enable-web \
+  && flutter config --no-enable-linux-desktop \
   && flutter precache \
   && yes "y" | flutter doctor --android-licenses \
   && flutter doctor \
